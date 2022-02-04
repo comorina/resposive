@@ -1,38 +1,539 @@
-.App {
+/* ====================
+Typography
+==================== */
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+/* ================
+Layout
+================ */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+header {
+  /* border: 1px solid rgb(218, 184, 112); */
+  background-color: rgb(32, 32, 39);
+}
+.header-section {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid orchid; */
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 1em;
+}
+
+@media (max-width: 838px) {
+  .header-section {
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  .header-title-name {
+    margin-bottom: 4rem;
+  }
+}
+
+.header-title-name {
+  font-size: 1.5rem;
+  color: white;
+  /* border: 1px solid black; */
+}
+
+nav ul {
+  /* border: 1px solid green; */
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+nav li {
+  /* border: 1px solid rgb(0, 217, 255); */
+  margin: 0px 1em;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 510;
+  font-family: "Roboto Mono", monospace;
+  color: white;
+}
+nav a:hover,
+nav a:active {
+  border-bottom: 2px solid white;
+}
+
+@media (max-width: 838px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5%;
+  }
+  nav li {
+    padding: 0.5em;
+  }
+}
+
+/* ==================
+Container
+================== */
+
+.container {
+  width: 90%;
+  max-width: 1024px;
+  display: flex;
+  justify-content: space-between;
+  /* border: 3px solid rgb(255, 217, 0); */
+  padding: 0;
+  margin: 0 auto;
+  margin-top: 8rem;
+}
+@media (max-width: 838px) {
+  .container {
+    width: 100%;
+    flex-direction: column;
+    padding: 0;
+  }
+  
+}
+
+/* ==================
+Main Container
+================== */
+.main-container {
+  width: 75%;
+  /* border: 2px solid green; */
+  padding: 1em;
+  margin: auto;
+}
+@media(max-width:838px){
+  .main-container{
+    width: 85%;
+  }
+}
+/* =====================
+About style
+===================== */
+.about-section {
+  display: flex;
+  /* justify-content: space-between; */
+  /* border: 2px solid rgb(19, 144, 202); */
+  margin: auto;
+}
+
+.shortIntro {
+  font-family: "Roboto Mono", monospace;
+
+  /* border: 3px solid rgb(219, 204, 139); */
+  padding: 3em 1.5em;
+  font-size: 2rem;
+}
+.devPic img {
+  border-radius: 10%;
+  width: 10em;
+}
+.devPic {
+  margin: auto;
+}
+strong {
+  color: rgb(0, 110, 255);
+  font-size: 2rem;
+}
+.shortIntro > p {
+  font-size: 2rem;
+}
+span {
+  font-size: 3rem;
+  font-weight: 700;
+}
+@media (max-width: 785px) {
+  .about-section {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+/* ====================
+Social Media Container
+==================== */
+
+.social-media {
+  width: 75%;
+  /* border: 2px solid rgb(0, 255, 149); */
+  margin: auto;
+  padding: 0;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+.social-media ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+.social-media li {
+  margin: 0px 0.5rem;
+}
+.social-media a {
+  text-decoration: none;
+  font-family: "Roboto Mono", monospace;
+}
+
+@media(max-width:611px){
+  .social-media ul{
+    flex-direction: column;
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+}
+
+/* ====================
+Education Section
+==================== */
+
+.education-section {
+  /* border: 2px solid rgba(255, 0, 0, 0.425); */
+}
+.edu-title {
+  font-weight: 700;
+  /* font-family: 'IBM Plex Sans Thai Looped', sans-serif; */
+  font-family: "Roboto Mono", monospace;
+  text-align: center;
+  margin-bottom: 4rem;
+  margin-top: 8rem;
+  font-size: 3rem;
+}
+.devgraduation {
+  width: 80%;
+  /* border: 1px solid rgb(200, 255, 0); */
+  margin: auto;
+  padding-bottom: 1em;
+  font-family: "Roboto Mono", monospace;
+}
+.devgraduation > h2 {
+  font-size: 2rem;
+  font-family: "Roboto Mono", monospace;
+  padding-bottom: 0.5em;
+}
+.devintermediate {
+  width: 80%;
+  /* border: 1px solid rgb(55, 0, 255); */
+  margin: auto;
+  font-family: "Roboto Mono", monospace;
+  padding-bottom: 1em;
+}
+.devintermediate > h2 {
+  font-size: 2rem;
+  font-family: "Roboto Mono", monospace;
+  padding-bottom: 0.5em;
+}
+.devhighschool {
+  width: 80%;
+  /* border: 1px solid rgb(255, 0, 212); */
+  margin: auto;
+  font-family: "Roboto Mono", monospace;
+  padding-bottom: 1em;
+}
+.devhighschool > h2 {
+  font-size: 2rem;
+  font-family: "Roboto Mono", monospace;
+  padding-bottom: 0.5em;
+}
+
+/* ====================
+Skill
+==================== */
+
+.skills-section {
+  margin: auto;
+  /* border: 2px solid rgba(0, 255, 64, 0.288); */
+}
+
+.skill-title {
+  font-weight: 700;
+  /* font-family: 'IBM Plex Sans Thai Looped', sans-serif; */
+  font-family: "Roboto Mono", monospace;
+  text-align: center;
+  margin-bottom: 4rem;
+  margin-top: 8rem;
+  font-size: 3rem;
+}
+
+.python,
+.cplus,
+.HTML,
+.css,
+.java,
+.react,
+.django,
+.fastapi {
+  width: 80%;
+  margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  font-size: 1.5rem;
+  font-family: "Roboto Mono", monospace;
+  padding-bottom: 0.5em;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  text-align: center;
+  padding: 0.5em;
+}
+
+/* ====================
+Project 
+==================== */
+
+
+
+.project-title {
+  font-weight: 700;
+  /* font-family: 'IBM Plex Sans Thai Looped', sans-serif; */
+  font-family: "Roboto Mono", monospace;
+  text-align: center;
+  margin-bottom: 4rem;
+  margin-top: 8rem;
+  font-size: 3rem;
+}
+
+.project1,
+.project2,
+.project3,
+.project4 {
+  width: 80%;
+  margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+  font-family: "Roboto Mono", monospace;
+  padding-bottom: 0.5em;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  text-align: center;
+  /* padding: 1em; */
+}
+
+.project1 > h2 {
+  font-family: "Roboto Mono", monospace;
+}
+.project2 > h2 {
+  font-family: "Roboto Mono", monospace;
+}
+.project3 > h2 {
+  font-family: "Roboto Mono", monospace;
+}
+.project4 > h2 {
+  font-family: "Roboto Mono", monospace;
+}
+
+/* ====================
+Hobbies
+==================== */
+
+
+
+.flexhobbies{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hobbies-title {
+  font-weight: 700;
+  /* font-family: 'IBM Plex Sans Thai Looped', sans-serif; */
+  font-family: "Roboto Mono", monospace;
+  text-align: center;
+  margin-bottom: 4rem;
+  margin-top: 8rem;
+  font-size: 3rem;
+}
+
+.travelling,
+.readingbook,
+.outdoorgame {
+  width: 80%;
+  max-width: fit-content;
+  margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  font-size: 1.5rem;
+  font-family: "Roboto Mono", monospace;
+  padding-bottom: 0.5em;
+  font-weight: 500;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.travelling > img {
+  width: 11.5em;
+}
+.readingbook > img {
+  width: 11.5em;
+}
+.outdoorgame > img {
+  width: 11.5em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.travelling > img:hover {
+  width: 12em;
+}
+.readingbook > img:hover {
+  width: 12em;
+}
+.outdoorgame > img:hover {
+  width: 12em;
+}
+@media (max-width: 500px) {
+  .travelling > img {
+    width: 8em;
+  }
+  .readingbook > img {
+    width: 8em;
+  }
+  .outdoorgame > img {
+    width: 8em;
+  }
+  .travelling > img:hover {
+    width: 8.5em;
+  }
+  .readingbook > img:hover {
+    width: 8.5em;
+  }
+  .outdoorgame > img:hover {
+    width: 8.5em;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* ====================
+feedback container
+==================== */
+.feedback-container {
+  width: 20%;
+  /* border: 2px solid rgb(247, 0, 255); */
+  /* padding: 1em; */
+  /* background-color: rgb(160, 156, 156); */
+}
+.input-field {
+  margin: auto;
+  background-color: white;
+  font-family: "Roboto Mono", monospace;
+  /* border: 2px solid red; */
+}
+
+.feedback-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  font-family: "Roboto Mono", monospace;
+  margin-bottom: 1rem;
+ 
+}
+.oldfeed {
+  margin: auto;
+  /* border: 2px solid rgb(0, 204, 255); */
+  margin-bottom: 2rem;
+  padding: 0.5em;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+@media (max-width: 838px) {
+  .feedback-container {
+    margin: auto;
+  }
+  .oldfeed {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .feedback-container {
+    width: 90%;
+    max-width: 1024px;
+  }
+}
+.john,
+.Lora,
+.Wissem,
+.Somaya {
+  width: 100%;
+  max-width: fit-content;
+  margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  font-size: 1.5rem;
+  font-family: "Roboto Mono", monospace;
+  /* padding-bottom: 0.5em; */
+  padding: 0.5em;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  text-align: center;
+  /* border: 2px solid rgb(0, 204, 255); */
+}
+.john > img {
+  border-radius: 50%;
+  width: 4em;
+  /* margin: auto; */
+}
+.Lora > img {
+  border-radius: 50%;
+  width: 5em;
+}
+.Wissem > img {
+  border-radius: 50%;
+  width: 5em;
+}
+.Somaya > img {
+  border-radius: 50%;
+  width: 5em;
+}
+.john > p {
+  font-size: 1rem;
+  text-align: center;
+}
+.Lora > p {
+  font-size: 1rem;
+  text-align: center;
+}
+.Wissem > p {
+  font-size: 1rem;
+  text-align: center;
+}
+.Somaya > p {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.input-field>button{
+  font-size: 1em;
+  padding: .2em;
+  border-radius: .2em;
+  background-color: aquamarine;
+}
+
+@media(max-width: 838px){
+  .john img{
+    width: 3em;
+  }
+}
+
+/* ====================
+footer
+==================== */
+
+.footer{
+  margin-bottom: 0;
+  background-color: rgb(32, 32, 39);
   color: white;
+  text-align: center;
+  height: 10rem;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.footer>h2{
+  font-size: 1.5rem;
+  font-family: "Roboto Mono", monospace;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer>p{
+  font-size: 1rem;
+  font-family: "Roboto Mono", monospace;
 }
